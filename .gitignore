@@ -1,0 +1,68 @@
+# Windows 관련
+*.exe
+*.dll
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.ipch
+*.iobj
+*.ipdb
+*.res
+*.aps
+*.ncb
+*.sdf
+*.cache
+*.log
+*.tlog
+*.lastbuildstate
+
+# Visual Studio 관련
+.vscode/
+.vs/           # Visual Studio 로컬 설정 폴더 (필수!)
+*.sln
+*.suo
+*.user
+*.userosscache
+*.vcxproj.*
+*.vcxproj
+*.filters
+*.props
+*.ruleset
+*.gpstate
+*.VC.db
+*.VC.opendb
+
+# CMake 관련
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+CMakeLists.txt.user
+
+# Direct2D 관련 (빌드 아티팩트)
+*.idb
+*.ilk
+*.obj
+*.pdb
+*.ipdb
+*.iobj
+*.exp
+*.lib
+*.log
+*.tlog
+
+# 빌드 출력 폴더
+Debug/
+Release/
+x64/
+bin/
+obj/
+
+# 기타
+*.bak
+*.tmp
+*.DS_Store
+*.directory
+Thumbs.db
