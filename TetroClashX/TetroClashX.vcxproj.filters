@@ -9,10 +9,12 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Wnd.h" />
+    <ClInclude Include="MainWnd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="TetroClashX.cpp" />
     <ClCompile Include="Wnd.cpp" />
+    <ClCompile Include="MainWnd.cpp" />
   </ItemGroup>
 </Project>

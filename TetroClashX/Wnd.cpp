@@ -47,6 +47,12 @@ LRESULT Wnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message)
 	{
+		case WM_CREATE:
+		{
+	
+			return 0;
+		}
+
 		case WM_PAINT:
 		{
 			PAINTSTRUCT ps;
