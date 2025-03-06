@@ -1,11 +1,10 @@
 #include "pch.h"
 #include "Wnd.h"
 
-Wnd::Wnd(HINSTANCE hInstance, const WCHAR* className, const WCHAR* title) 
+Wnd::Wnd(HINSTANCE hInstance) 
 	: _hInstance(hInstance), _hWnd(nullptr)
 {
-	 wcscpy_s(_className, className);
-	 wcscpy_s(_title, title);
+
 }
 
 Wnd::~Wnd()
@@ -21,6 +20,8 @@ LRESULT Wnd::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		LPCREATESTRUCT pCS = (LPCREATESTRUCT) lParam;
 		SetLastError(0);
 		pThis = (Wnd*)pCS->lpCreateParams;
+		pThis->SetHandle(hWnd);
+
 		if (!SetWindowLongPtr(hWnd, GWLP_USERDATA, (LONG_PTR)pThis)) 
 		{
 			if (GetLastError() != 0)
@@ -50,7 +51,7 @@ LRESULT Wnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		{
 			PAINTSTRUCT ps;
 			HDC hdc = BeginPaint(_hWnd, &ps);
-			TextOut(hdc, 50, 50, L"Hello, OOP!", 12);
+			TextOutW(hdc, 50, 50, L"안녕하세요", 5);
 			EndPaint(_hWnd, &ps);
 			return 0;
 		}
@@ -63,41 +64,26 @@ LRESULT Wnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(_hWnd, message, wParam, lParam);
 }
 
-bool Wnd::Create(int width, int height)
+bool Wnd::Create(int width, int height, const WCHAR* className, const WCHAR* title)
 {
-
-	WNDCLASSEX wecx;
+	WNDCLASSEX wecx = {};
 	wecx.cbSize = sizeof(WNDCLASSEX);
 	wecx.style = CS_HREDRAW | CS_VREDRAW;
 	wecx.cbClsExtra = 0;
 	wecx.cbWndExtra = sizeof(LONG_PTR);
 	wecx.hInstance = _hInstance;
-	wecx.hIcon = LoadIcon(_hInstance, IDI_APPLICATION);
+	wecx.hIcon = LoadIcon(NULL, IDI_APPLICATION);
 	wecx.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wecx.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	wecx.lpszClassName = _className;
-	wecx.hIconSm = LoadIcon(wecx.hInstance, IDI_APPLICATION);
+	wecx.lpszClassName = className;
+	wecx.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	wecx.lpfnWndProc = Wnd::WndProc;  // 정적함수
-	if (!RegisterClassEx(&wecx))
-	{
-		MessageBox(NULL,
-			L"Call to RegisterClassEx Main failed!",
-			L"Windows Desktop Guided Tour",
-			NULL);
-		return 0;
-	}
+	RegisterClassEx(&wecx);
 
-	_hWnd = CreateWindow(_className, _title, WS_OVERLAPPEDWINDOW
+	_hWnd = CreateWindow(className, title, WS_OVERLAPPEDWINDOW
 		, 0, 0, width, height
 		, NULL, NULL, _hInstance, this);
 
-	if (_hWnd == NULL) 
-	{
-		DWORD errCode = GetLastError();
-		wchar_t errMsg[256];
-		swprintf(errMsg, 256, L"CreateWindowEx failed! Error Code: %lu", errCode);
-		MessageBox(NULL, errMsg, L"Error", MB_OK | MB_ICONERROR);
-	}
 
 	return _hWnd != NULL;
 }
@@ -111,4 +97,9 @@ void Wnd::Show(int nCmdShow)
 HWND Wnd::GetHandle()
 {
 	return _hWnd;
+}
+
+void Wnd::SetHandle(HWND hWnd)
+{
+	_hWnd = hWnd;
 }

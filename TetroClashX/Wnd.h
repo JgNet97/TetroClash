@@ -5,19 +5,18 @@
 class Wnd
 {
 protected:
-	WCHAR		_className[30] = L"";
-	WCHAR		_title[30] = L"";
 	HINSTANCE	_hInstance;
 	HWND		_hWnd;
 
 public:
-	Wnd(HINSTANCE hInstance, const WCHAR* className, const WCHAR* title);
+	Wnd(HINSTANCE hInstance);
 	~Wnd();
 
 	static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 	LRESULT HandleMessage(UINT message, WPARAM wParam, LPARAM lParam);
 
-	bool Create(int width, int height);
+	bool Create(int width, int height, const WCHAR* className, const WCHAR* title);
 	void Show(int nCmdShow);
 	HWND GetHandle();
+	void SetHandle(HWND hWnd);
 };

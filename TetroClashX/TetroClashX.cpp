@@ -1,8 +1,9 @@
 #include "pch.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-    Wnd myWnd(hInstance, L"dsadas", L"dsadsa");
-    if (!myWnd.Create(500, 300)) return 0;
+    Wnd myWnd(hInstance);
+    if (!myWnd.Create(500, 300, L"ddd", L"ddd")) 
+        return 0;
 
     myWnd.Show(nCmdShow);
 
