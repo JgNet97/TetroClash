@@ -1,5 +1,8 @@
 #pragma once
 #include "Wnd.h"
+/********************
+	MainWnd
+********************/
 class MainWnd : public Wnd
 {
 private:

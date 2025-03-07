@@ -10,11 +10,15 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Wnd.h" />
     <ClInclude Include="MainWnd.h" />
+    <ClInclude Include="D2DCore.h" />
+    <ClInclude Include="D2DBitmap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="TetroClashX.cpp" />
     <ClCompile Include="Wnd.cpp" />
     <ClCompile Include="MainWnd.cpp" />
+    <ClCompile Include="D2DCore.cpp" />
+    <ClCompile Include="D2DBitmap.cpp" />
   </ItemGroup>
 </Project>
