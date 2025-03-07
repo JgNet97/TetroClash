@@ -28,6 +28,16 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		return 0;
 	}
 
+	case WM_MOUSEMOVE:
+	{
+		int xPos = LOWORD(lParam);
+		int yPos = HIWORD(lParam);
+		wchar_t buffer[64];
+		swprintf_s(buffer, L"Mouse Position: (%d, %d)", xPos, yPos);
+		SetWindowText(_hWnd, buffer);
+		return 0;
+	}
+
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		return 0;

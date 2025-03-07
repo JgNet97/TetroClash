@@ -86,7 +86,7 @@ bool Wnd::Create(int width, int height, const WCHAR* className, const WCHAR* tit
 	wecx.lpfnWndProc = Wnd::WndProc;  // 정적함수
 	RegisterClassEx(&wecx);
 
-	_hWnd = CreateWindow(className, title, WS_OVERLAPPEDWINDOW
+	_hWnd = CreateWindow(className, title, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU
 		, 0, 0, width, height
 		, NULL, NULL, _hInstance, this);
 
