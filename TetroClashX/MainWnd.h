@@ -1,9 +1,9 @@
 #pragma once
-#include "Wnd.h"
+#include "D2DWnd.h"
 /********************
 	MainWnd
 ********************/
-class MainWnd : public Wnd
+class MainWnd : public D2DWnd
 {
 private:
 	HWND _hEdit;

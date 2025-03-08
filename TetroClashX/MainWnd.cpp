@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "MainWnd.h"
-
-MainWnd::MainWnd(HINSTANCE hInstance) : Wnd(hInstance)
+MainWnd::MainWnd(HINSTANCE hInstance) : D2DWnd(hInstance)
 {
 }
 

@@ -12,6 +12,7 @@
     <ClInclude Include="MainWnd.h" />
     <ClInclude Include="D2DCore.h" />
     <ClInclude Include="D2DBitmap.h" />
+    <ClInclude Include="D2DWnd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -20,5 +21,6 @@
     <ClCompile Include="MainWnd.cpp" />
     <ClCompile Include="D2DCore.cpp" />
     <ClCompile Include="D2DBitmap.cpp" />
+    <ClCompile Include="D2DWnd.cpp" />
   </ItemGroup>
 </Project>
