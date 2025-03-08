@@ -132,6 +132,7 @@
     <ClInclude Include="D2DBitmap.h" />
     <ClInclude Include="D2DCore.h" />
     <ClInclude Include="D2DWnd.h" />
+    <ClInclude Include="Define.h" />
     <ClInclude Include="MainWnd.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Wnd.h" />

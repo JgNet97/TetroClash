@@ -13,6 +13,7 @@
     <ClInclude Include="D2DCore.h" />
     <ClInclude Include="D2DBitmap.h" />
     <ClInclude Include="D2DWnd.h" />
+    <ClInclude Include="Define.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />

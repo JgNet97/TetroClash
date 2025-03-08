@@ -1,0 +1,4 @@
+#pragma once
+
+#define MAIN_WINDOW_WIDTH 1920
+#define MAIN_WINDOW_HEIGHT 1080

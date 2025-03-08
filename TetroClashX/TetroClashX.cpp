@@ -3,7 +3,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     
     MainWnd myWnd(hInstance);
-    if (!myWnd.Create(1920, 1080, L"mainWnd", L"Å×½ºÆ®")) 
+    if (!myWnd.Create(MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT, L"mainWnd", L"TextroClash"))
         return 0;
 
     myWnd.Show(nCmdShow);

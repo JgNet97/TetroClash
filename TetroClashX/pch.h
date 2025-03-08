@@ -7,6 +7,7 @@
 #include <wincodec.h>
 #include <assert.h>
 #include <map>
+#include "Define.h"
 #include "D2DCore.h"
 #include "MainWnd.h"
 #define CRUSH assert(false);
