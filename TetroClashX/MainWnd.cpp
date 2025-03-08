@@ -22,7 +22,10 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 		PAINTSTRUCT ps;
 		HDC hdc = BeginPaint(_hWnd, &ps);
-		TextOutW(hdc, 50, 50, L"æ»≥Á«œººø‰2", 6);
+		ID2D1Bitmap* id2d1Bitmap = nullptr;
+		BeginDraw();
+
+		EndDraw(id2d1Bitmap);
 		EndPaint(_hWnd, &ps);
 		return 0;
 	}

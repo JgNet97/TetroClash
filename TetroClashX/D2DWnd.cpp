@@ -38,7 +38,7 @@ void D2DWnd::RegisterColor(unsigned int color, float opacity)
 void D2DWnd::BeginDraw()
 {
 	_crt->BeginDraw();
-	_crt->Clear(D2D1::ColorF(D2D1::ColorF::Black));
+	_crt->Clear(D2D1::ColorF(D2D1::ColorF::AntiqueWhite));
 }
 
 void D2DWnd::DrawBitmap(ID2D1Bitmap* bitmap)
