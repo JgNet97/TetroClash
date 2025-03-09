@@ -23,7 +23,7 @@ void LoginScene::Init(HWND hWnd, HINSTANCE hInstance)
 
 	if (!_loginPanel) 
 	{
-		_loginPanel = CreateWindow(L"STATIC", NULL, WS_CHILD | WS_VISIBLE,
+		_loginPanel = CreateWindowEx(WS_EX_CONTROLPARENT ,L"STATIC", NULL, WS_CHILD | WS_VISIBLE,
 			710, 700, 500, 270, hWnd, NULL, hInstance, NULL);
 	}
 
@@ -70,8 +70,8 @@ void LoginScene::Init(HWND hWnd, HINSTANCE hInstance)
 		_hButton = CreateWindow(
 			L"BUTTON", L"·Î±×ÀÎ",
 			WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-			50, 190, 350, 50, 
-			_loginPanel, (HMENU)1, GetModuleHandle(NULL), NULL);
+			794, 889, 350, 50, 
+			hWnd, (HMENU)1, hInstance, NULL);
 		SendMessage(_hButton, WM_SETFONT, (WPARAM)_hFont, TRUE);
 	}
 

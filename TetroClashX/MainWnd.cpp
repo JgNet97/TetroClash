@@ -14,7 +14,6 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_CREATE:
 	{
-		CreateMessageHandle();
 		return 0;
 	}
 
@@ -45,17 +44,26 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		return 0;
 	}
 
+	case WM_COMMAND:
+	{
+		int code = LOWORD(wParam);
+		switch (code)
+		{
+		case 1:
+			// 로그인 버튼
+			break;
+		}
+
+
+		return 0;
+	}
+
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		return 0;
 	}
 
 	return DefWindowProc(_hWnd, message, wParam, lParam);
-}
-
-void MainWnd::CreateMessageHandle()
-{
-
 }
 
 bool MainWnd::Create(int width, int height, const WCHAR* className, const WCHAR* title)

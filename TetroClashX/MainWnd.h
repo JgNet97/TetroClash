@@ -13,8 +13,6 @@ public:
 	virtual ~MainWnd();
 
 	virtual LRESULT HandleMessage(UINT message, WPARAM wParam, LPARAM lParam);
-
-	void CreateMessageHandle();
 	virtual bool Create(int width, int height, const WCHAR* className, const WCHAR* title);
 };
 
