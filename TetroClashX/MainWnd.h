@@ -6,12 +6,7 @@
 class MainWnd : public D2DWnd
 {
 private:
-	// 로그인 관련 UI
-	HWND _loginPanel;
-	HWND _hUserIdInput;
-	HWND _hUserPwInput;
-	HFONT _hFont;
-	D2DBitmap* _loginBg;
+
 
 public:
 	MainWnd(HINSTANCE hInstance);

@@ -52,6 +52,7 @@
     <ClInclude Include="LoginScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Resources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TetroClashX.cpp" />
@@ -82,5 +83,6 @@
     <ClCompile Include="LoginScene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Resources.cpp" />
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ Scene::~Scene()
 {
 }
 
-void Scene::Init()
+void Scene::Init(HWND hWnd, HINSTANCE hInstance)
 {
 
 }
@@ -23,6 +23,6 @@ void Scene::Update()
 {
 }
 
-void Scene::Render()
+void Scene::Render(HWND hWnd, HINSTANCE hInstance, ID2D1BitmapRenderTarget* crt)
 {
 }
