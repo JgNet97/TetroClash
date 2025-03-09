@@ -24,6 +24,8 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		HDC hdc = BeginPaint(_hWnd, &ps);
 		ID2D1Bitmap* id2d1Bitmap = nullptr;
 		BeginDraw();
+		_crt->DrawBitmap(_loginBg->GetD2D1Bitmap(), {0,0,1920,1080});
+
 
 		EndDraw(id2d1Bitmap);
 		EndPaint(_hWnd, &ps);
@@ -53,13 +55,10 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(_hWnd, message, wParam, lParam);
 }
 
-/*********
-	INIT
-**********/
 void MainWnd::CreateMessageHandle()
 {
 	_loginPanel = CreateWindow(L"STATIC", NULL, WS_CHILD | WS_VISIBLE,
-		710, 405, 500, 270, _hWnd, NULL, _hInstance, NULL);
+		710, 700, 500, 270, _hWnd, NULL, _hInstance, NULL);
 
 	_hFont = CreateFont(
 		24, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE,
@@ -100,4 +99,15 @@ void MainWnd::CreateMessageHandle()
 	SendMessage(hUserIdText, WM_SETFONT, (WPARAM)_hFont, TRUE);
 	SendMessage(hUserPwText, WM_SETFONT, (WPARAM)_hFont, TRUE);
 	SendMessage(hButton, WM_SETFONT, (WPARAM)_hFont, TRUE);
+}
+
+bool MainWnd::Create(int width, int height, const WCHAR* className, const WCHAR* title)
+{
+	bool ok = D2DWnd::Create(width, height, className, title);
+	
+	if (!ok)
+		return ok;
+	
+	_loginBg = D2DCore::GetInstance()->CreateD2Bitmap(_crt, L"./image/login_bg.png");
+	return true;
 }

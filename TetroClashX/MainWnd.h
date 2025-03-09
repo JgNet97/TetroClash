@@ -11,7 +11,7 @@ private:
 	HWND _hUserIdInput;
 	HWND _hUserPwInput;
 	HFONT _hFont;
-
+	D2DBitmap* _loginBg;
 
 public:
 	MainWnd(HINSTANCE hInstance);
@@ -20,5 +20,6 @@ public:
 	virtual LRESULT HandleMessage(UINT message, WPARAM wParam, LPARAM lParam);
 
 	void CreateMessageHandle();
+	virtual bool Create(int width, int height, const WCHAR* className, const WCHAR* title);
 };
 

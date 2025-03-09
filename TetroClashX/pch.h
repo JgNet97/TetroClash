@@ -9,5 +9,6 @@
 #include <map>
 #include "Define.h"
 #include "D2DCore.h"
+#include "D2DBitmap.h"
 #include "MainWnd.h"
 #define CRUSH assert(false);
