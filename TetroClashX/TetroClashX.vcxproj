@@ -133,18 +133,25 @@
     <ClInclude Include="D2DCore.h" />
     <ClInclude Include="D2DWnd.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="LoginScene.h" />
     <ClInclude Include="MainWnd.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Types.h" />
     <ClInclude Include="Wnd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D2DBitmap.cpp" />
     <ClCompile Include="D2DCore.cpp" />
     <ClCompile Include="D2DWnd.cpp" />
+    <ClCompile Include="LoginScene.cpp" />
     <ClCompile Include="MainWnd.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TetroClashX.cpp" />
     <ClCompile Include="Wnd.cpp" />
   </ItemGroup>

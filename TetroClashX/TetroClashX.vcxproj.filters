@@ -5,23 +5,82 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="D2D">
+      <UniqueIdentifier>{79d48a79-e004-42f1-9cba-f4a391a9a204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wnd">
+      <UniqueIdentifier>{d7766714-40aa-499f-b90e-1325aaa46a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{c8890967-b2af-48fe-ad16-dee9fbe90738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{a15e2969-3307-4d1b-b2d6-8a6786bb5ff0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Wnd.h" />
-    <ClInclude Include="MainWnd.h" />
-    <ClInclude Include="D2DCore.h" />
-    <ClInclude Include="D2DBitmap.h" />
-    <ClInclude Include="D2DWnd.h" />
-    <ClInclude Include="Define.h" />
+    <ClInclude Include="D2DBitmap.h">
+      <Filter>D2D</Filter>
+    </ClInclude>
+    <ClInclude Include="D2DCore.h">
+      <Filter>D2D</Filter>
+    </ClInclude>
+    <ClInclude Include="D2DWnd.h">
+      <Filter>Wnd</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWnd.h">
+      <Filter>Wnd</Filter>
+    </ClInclude>
+    <ClInclude Include="Wnd.h">
+      <Filter>Wnd</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp" />
     <ClCompile Include="TetroClashX.cpp" />
-    <ClCompile Include="Wnd.cpp" />
-    <ClCompile Include="MainWnd.cpp" />
-    <ClCompile Include="D2DCore.cpp" />
-    <ClCompile Include="D2DBitmap.cpp" />
-    <ClCompile Include="D2DWnd.cpp" />
+    <ClCompile Include="D2DBitmap.cpp">
+      <Filter>D2D</Filter>
+    </ClCompile>
+    <ClCompile Include="D2DCore.cpp">
+      <Filter>D2D</Filter>
+    </ClCompile>
+    <ClCompile Include="D2DWnd.cpp">
+      <Filter>Wnd</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWnd.cpp">
+      <Filter>Wnd</Filter>
+    </ClCompile>
+    <ClCompile Include="Wnd.cpp">
+      <Filter>Wnd</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

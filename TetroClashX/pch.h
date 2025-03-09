@@ -7,6 +7,7 @@
 #include <wincodec.h>
 #include <assert.h>
 #include <map>
+#include "Types.h"
 #include "Define.h"
 #include "D2DCore.h"
 #include "D2DBitmap.h"
