@@ -133,6 +133,7 @@
     <ClInclude Include="D2DCore.h" />
     <ClInclude Include="D2DWnd.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="LobbyScene.h" />
     <ClInclude Include="LoginScene.h" />
     <ClInclude Include="MainWnd.h" />
     <ClInclude Include="pch.h" />
@@ -146,6 +147,7 @@
     <ClCompile Include="D2DBitmap.cpp" />
     <ClCompile Include="D2DCore.cpp" />
     <ClCompile Include="D2DWnd.cpp" />
+    <ClCompile Include="LobbyScene.cpp" />
     <ClCompile Include="LoginScene.cpp" />
     <ClCompile Include="MainWnd.cpp" />
     <ClCompile Include="pch.cpp">

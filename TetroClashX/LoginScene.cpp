@@ -84,11 +84,14 @@ void LoginScene::Init(HWND hWnd, HINSTANCE hInstance)
 	{
 		_logo = Resources::GetInstance()->logoBitmap;
 	}
+
+	ShowWindow(_loginPanel, SW_SHOW);
 }
 
 void LoginScene::Clear()
 {
-
+	ShowWindow(_loginPanel, SW_HIDE);
+	ShowWindow(_hButton, SW_HIDE);
 }
 
 void LoginScene::Update()
@@ -98,6 +101,6 @@ void LoginScene::Update()
 
 void LoginScene::Render(HWND hWnd, HINSTANCE hInstance, ID2D1BitmapRenderTarget* crt)
 {
-	crt->DrawBitmap(_loginBg->GetD2D1Bitmap(), {0,0,1920,1080});
+	// crt->DrawBitmap(_loginBg->GetD2D1Bitmap()); 배경 너무 못생겨서 삭제 ㅋㅋ
 	crt->DrawBitmap(_logo->GetD2D1Bitmap(), { 710,150,710 + 500,150 + 500},1.0f, D2D1_BITMAP_INTERPOLATION_MODE_LINEAR);
 }

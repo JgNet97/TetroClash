@@ -51,6 +51,7 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		{
 		case 1:
 			// 로그인 버튼
+			SceneManager::GetInstance()->NextScene(SCENE_TYPE::LOBBY_SCENE);
 			break;
 		}
 

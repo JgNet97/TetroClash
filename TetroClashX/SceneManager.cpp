@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "SceneManager.h"
 #include "LoginScene.h"
+#include "LobbyScene.h"
 SceneManager::SceneManager()
 {
 }
@@ -21,6 +22,7 @@ void SceneManager::Init(HWND hWnd, HINSTANCE hInstance)
 	_hWnd= hWnd;
 	_hInstance = hInstance;
 	_scenes[LOGIN_SCENE] = new LoginScene();
+	_scenes[LOBBY_SCENE] = new LobbyScene();
 	_nowScene = _scenes[LOGIN_SCENE];
 	_nowScene->Init(hWnd, hInstance);
 }

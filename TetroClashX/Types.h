@@ -2,5 +2,6 @@
 enum SCENE_TYPE 
 {
 	LOGIN_SCENE,
+	LOBBY_SCENE,
 	SCENE_COUNT 
 };
