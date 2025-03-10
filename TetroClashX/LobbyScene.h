@@ -5,8 +5,12 @@
 class LobbyScene : public Scene
 {
 private:
-	D2DBitmap* _lobbyBg;
-
+	D2DBitmap*	_lobbyBg;
+	HWND		_hChatPannel;
+	HWND		_hChatView;
+	HWND		_hChatInput;
+	HWND		_hChatSendBtn;
+	HFONT		_hFont;
 public:
 	LobbyScene();
 	virtual ~LobbyScene();
