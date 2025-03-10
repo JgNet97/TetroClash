@@ -34,6 +34,12 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 		return 0;
 	}
 
+	case WM_SIZE:
+	{
+		InvalidateRect(_hWnd, NULL, TRUE); // 창 크기 변경 시 전체 무효화
+		return 0;
+	}
+
 	case WM_MOUSEMOVE:
 	{
 		int xPos = LOWORD(lParam);
@@ -54,8 +60,6 @@ LRESULT MainWnd::HandleMessage(UINT message, WPARAM wParam, LPARAM lParam)
 			SceneManager::GetInstance()->NextScene(SCENE_TYPE::LOBBY_SCENE);
 			break;
 		}
-
-
 		return 0;
 	}
 
@@ -74,6 +78,7 @@ bool MainWnd::Create(int width, int height, const WCHAR* className, const WCHAR*
 		return ok;
 	Resources::GetInstance()->loginBackgroundBitmap = D2DCore::GetInstance()->CreateD2Bitmap(_crt, L"./image/login_bg.png");
 	Resources::GetInstance()->logoBitmap = D2DCore::GetInstance()->CreateD2Bitmap(_crt, L"./image/logo.png");
+	Resources::GetInstance()->lobbyBackgroundBitamp = D2DCore::GetInstance()->CreateD2Bitmap(_crt, L"./image/lobby_bg.png");
 	SceneManager::GetInstance()->Init(_hWnd, _hInstance);
 	return true;
 }

@@ -5,6 +5,7 @@
 class LobbyScene : public Scene
 {
 private:
+	D2DBitmap* _lobbyBg;
 
 public:
 	LobbyScene();
